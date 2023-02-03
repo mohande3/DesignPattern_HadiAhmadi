@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositeSpecification", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositProduct", "CompositProduct\CompositProduct.csproj", "{D02C9B1A-DA00-4778-9895-0E4DF0E96ECE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composit", "Composit", "{6E12E0D6-F2B5-4971-84FA-DA2D46F33CEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{08EACD8B-27E8-4F96-8D9F-6B839820C07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABF3ADD7-8E08-4F4E-872F-BFDE6DA8E10C} = {6E12E0D6-F2B5-4971-84FA-DA2D46F33CEC}
+		{69CBBC8B-19C6-4E70-8DB2-FC7AD6E94D96} = {08EACD8B-27E8-4F96-8D9F-6B839820C07F}
+		{21B96CCC-33B0-4227-AC8E-74E4164EC701} = {6E12E0D6-F2B5-4971-84FA-DA2D46F33CEC}
+		{D02C9B1A-DA00-4778-9895-0E4DF0E96ECE} = {6E12E0D6-F2B5-4971-84FA-DA2D46F33CEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C85977C8-BFA7-442F-9264-93A7BF54EE47}

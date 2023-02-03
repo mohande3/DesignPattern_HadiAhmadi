@@ -9,18 +9,21 @@ namespace Builder3.Builder
 {
     internal class HtmlDocumentBuilder
     {
-        public void AddTitle(string title)
+        public HtmlDocumentBuilder AddTitle(string title)
         {
-
+            //-- work
+            return this;
         }
 
-        public void AddTable(string content)
+        public HtmlDocumentBuilder AddTable(string content)
         {
-
+            //-- work
+            return this;
         }
-        public void AddParagraph(string content)
+        public HtmlDocumentBuilder AddParagraph(string content)
         {
-
+            //-- work
+            return this;
         }
 
         public string Build() => "";

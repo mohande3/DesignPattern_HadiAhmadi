@@ -11,7 +11,7 @@ namespace Builder4_UrlBuilder
         private string _scheme = "http";
         private string _host = "localhost";
         private string? _port = string.Empty;
-        private string _queryString = string.Empty;
+        private Dictionary<string, string> _queryString = new Dictionary<string, string>();
 
         public UrlBuilder WithScheme(string scheme)
         {
@@ -31,9 +31,9 @@ namespace Builder4_UrlBuilder
             return this;
         }
 
-        public UrlBuilder WithQueryString(string queryString)
+        public UrlBuilder WithQueryString(string key, string value)
         {
-            _queryString = queryString;
+            _queryString.Add(key, value);
             return this;
         }
 

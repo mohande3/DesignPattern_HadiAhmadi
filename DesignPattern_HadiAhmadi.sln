@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompositWithBuilder", "Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositWithBuilder01_TagHelper", "CompositWithBuilder01_TagHelper\CompositWithBuilder01_TagHelper.csproj", "{A6EC7F40-5C22-406B-B690-800B71EB6E61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositWithBuilder2_Sales", "CompositWithBuilder2_Sales\CompositWithBuilder2_Sales.csproj", "{44EFD552-EC31-4C91-B873-CC24A2641B96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{A6EC7F40-5C22-406B-B690-800B71EB6E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EC7F40-5C22-406B-B690-800B71EB6E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6EC7F40-5C22-406B-B690-800B71EB6E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EFD552-EC31-4C91-B873-CC24A2641B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EFD552-EC31-4C91-B873-CC24A2641B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EFD552-EC31-4C91-B873-CC24A2641B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EFD552-EC31-4C91-B873-CC24A2641B96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{161F5AF9-EC37-46D2-B413-9870C05F5005} = {08EACD8B-27E8-4F96-8D9F-6B839820C07F}
 		{7A40E2C4-794F-494F-8763-DE8491868A81} = {08EACD8B-27E8-4F96-8D9F-6B839820C07F}
 		{A6EC7F40-5C22-406B-B690-800B71EB6E61} = {DB9EAD6A-7557-4347-B91B-63F126977102}
+		{44EFD552-EC31-4C91-B873-CC24A2641B96} = {DB9EAD6A-7557-4347-B91B-63F126977102}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C85977C8-BFA7-442F-9264-93A7BF54EE47}

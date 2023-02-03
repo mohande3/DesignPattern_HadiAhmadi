@@ -29,12 +29,12 @@ namespace CompositWithBuilder01_TagHelper
 
         public StringBuilder Render(StringBuilder resultBuilder)
         {
-            resultBuilder.Append($"\t<{_name} {_attributes}>\n");
+            resultBuilder.Append($"\t<{_name}{_attributes}>\n");
             foreach (var child in _children)
                 child.Render(resultBuilder);
 
-            resultBuilder.Append($"\t{_value}\n");
-            resultBuilder.Append($"\t</{_name}>\n");
+            resultBuilder.Append($"\t\t{_value}");
+            resultBuilder.Append($"\n\t</{_name}>\n");
             return resultBuilder;
         }
 

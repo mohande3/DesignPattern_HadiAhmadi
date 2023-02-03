@@ -1,14 +1,10 @@
 ﻿
 using CompositWithBuilder01_TagHelper;
 
-var tag = new TagNode("Root");
-tag.AddValue("This is a Value");
-tag.AddAttribute("class", "show");
-
-var childClass = new TagNode("children");
-childClass.AddValue("New Value For Child Class");
-
-tag.Add(childClass);
+var tag = new XmlDocumentBuilder("Root")
+    .AddAttribute("class", "show")
+    .AddChild(ch => ch.AddChild("child2").AddChild("child3").Build())
+    .Build();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine(tag.Render());

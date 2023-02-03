@@ -1,26 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Builder5_StepBuilder.BuilderStep2
 {
-    internal  interface IHttpWebRequestStepBuilder
+    internal interface IHttpWebRequestStepBuilder
+    {
+        IHttpWebRequestStepBuilder Build();
+    }
+    internal interface IHttpWebRequestMethodStepBuilder
     {
         IHttpWebRequestStepBuilder Get();
-        IHttpWebRequestStepBuilder Post();
-        IHttpWebRequestStepBuilder Put();
-        IHttpWebRequestStepBuilder Build();
+        IHttpWebRequestContentStepBuilder Post();
+        IHttpWebRequestContentStepBuilder Put();
     }
 
     internal interface IHttpWebRequestContentStepBuilder
     {
-        IHttpWebRequestContentStepBuilder WithBody();
+        IHttpWebRequestStepBuilder WithBody();
     }
 
-    internal class HttpWebRequestStepBuilder : IHttpWebRequestStepBuilder, IHttpWebRequestContentStepBuilder
+    internal class HttpWebRequestStepBuilder :
+        IHttpWebRequestStepBuilder,
+        IHttpWebRequestMethodStepBuilder,
+        IHttpWebRequestContentStepBuilder
     {
+
+        private HttpWebRequestStepBuilder() { }
+        public static IHttpWebRequestMethodStepBuilder NewRequest()
+        {
+            return new HttpWebRequestStepBuilder();
+        }
+
         public IHttpWebRequestStepBuilder Build()
         {
             throw new NotImplementedException();
@@ -31,17 +45,17 @@ namespace Builder5_StepBuilder.BuilderStep2
             throw new NotImplementedException();
         }
 
-        public IHttpWebRequestStepBuilder Post()
+        public IHttpWebRequestContentStepBuilder Post()
         {
             throw new NotImplementedException();
         }
 
-        public IHttpWebRequestStepBuilder Put()
+        public IHttpWebRequestContentStepBuilder Put()
         {
             throw new NotImplementedException();
         }
 
-        public IHttpWebRequestContentStepBuilder WithBody()
+        public IHttpWebRequestStepBuilder WithBody()
         {
             throw new NotImplementedException();
         }

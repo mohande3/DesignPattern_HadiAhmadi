@@ -1,8 +1,5 @@
 ﻿
+using Builder5_StepBuilder.BuilderStep2;
 
-using Builder5_StepBuilder;
-
-var request = new HttpWebRequestBuilder()
-    .Post()
-    .WithBody("My Body") // این منطقی نیست
-    .Build();
+var request = new HttpWebRequestStepBuilder()
+    .Put

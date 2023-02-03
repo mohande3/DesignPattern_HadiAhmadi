@@ -37,6 +37,16 @@ namespace Builder4_UrlBuilder
             return this;
         }
 
+        public UrlBuilder WithQueryStringAction(Action<QueryStringBuilder> queryStringBuilderConfig)
+        {
+            if (_queryStringBuilder == null)
+                _queryStringBuilder = new QueryStringBuilder();
+
+            queryStringBuilderConfig.Invoke(_queryStringBuilder);
+            
+            return this;
+        }
+
 
         public string Build()
         {

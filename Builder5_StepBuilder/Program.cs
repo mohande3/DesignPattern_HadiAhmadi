@@ -3,6 +3,6 @@
 using Builder5_StepBuilder;
 
 var request = new HttpWebRequestBuilder()
-    .Get()
+    .Post()
     .WithBody("My Body") // این منطقی نیست
     .Build();

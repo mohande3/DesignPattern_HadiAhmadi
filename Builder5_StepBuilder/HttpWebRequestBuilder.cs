@@ -1,33 +1,50 @@
 ﻿namespace Builder5_StepBuilder
 {
-    internal class HttpWebRequestBuilder
+    internal interface IHttpWebRequestBuilder
     {
+        IHttpWebRequestBuilder Build();
+    }
+    internal interface IHttpWebRequestMethodBuilder : IHttpWebRequestBuilder
+    {
+        IHttpWebRequestBuilder Get();
+        IHttpWebRequestBuilderWithBody Post();
+        IHttpWebRequestBuilderWithBody Put();
+    }
+
+    internal interface IHttpWebRequestBuilderWithBody : IHttpWebRequestBuilder
+    {
+        IHttpWebRequestBuilderWithBody WithBody(string content);
+    }
+
+    internal class HttpWebRequestBuilder : IHttpWebRequestMethodBuilder, IHttpWebRequestBuilderWithBody
+    {
+
         private HttpMethod _method;
 
-        public HttpWebRequestBuilder Get()
+        public IHttpWebRequestBuilder Get()
         {
             _method = HttpMethod.Get;
             return this;
         }
-        public HttpWebRequestBuilder Post()
+        public IHttpWebRequestBuilderWithBody Post()
         {
             _method = HttpMethod.Post;
             return this;
         }
-        public HttpWebRequestBuilder Put()
+        public IHttpWebRequestBuilderWithBody Put()
         {
             _method = HttpMethod.Put;
             return this;
         }
 
-        public HttpWebRequestBuilder WithBody(string content)
+        public IHttpWebRequestBuilderWithBody WithBody(string content)
         {
             return this;
         }
 
-        public HttpRequestMessage Build()
+        public IHttpWebRequestBuilder Build()
         {
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

@@ -18,6 +18,26 @@ namespace Builder4_UrlBuilder
             _scheme = scheme;
             return this;
         }
+
+        public UrlBuilder WithHost(string host)
+        {
+            _host = host;
+            return this;
+        }
+
+        public UrlBuilder WithPort(string port)
+        {
+            _port = port;
+            return this;
+        }
+
+        public UrlBuilder WithQueryString(string queryString)
+        {
+            _queryString = queryString;
+            return this;
+        }
+
+
         public string Build()
             => $"{_scheme}://{_host}:{_port}/{_queryString}";
     }
